@@ -3,8 +3,8 @@ BUILD_DIR = build
 LAB_DIR = lab
 
 main: 
-	# gcc -std=c99 -Wall -Werror ./$(SRC_DIR)/storage/main.c -o ./$(BUILD_DIR)/main
-	gcc -std=c99 -Wall -Werror ./$(LAB_DIR)/main.c -o ./$(BUILD_DIR)/main
+	gcc -std=c99 -Wall -Werror -I./$(SRC_DIR)/inft ./$(SRC_DIR)/impl/storage/main.c -o ./$(BUILD_DIR)/main
+	# gcc -std=c99 -Wall -Werror ./$(LAB_DIR)/main.c -o ./$(BUILD_DIR)/main
 
 
 clean:

@@ -6,19 +6,9 @@
 #include <unistd.h>   // read, write, close
 #include <sys/stat.h> // file permission
 
-#define MAX_INPUT_SIZE 1024
+#include "dbfile.h"
 
-
-int open_db(const char *filename)
-{
-    int fd = open(filename, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
-    if (fd == -1) {
-        perror("open");
-        exit(EXIT_FAILURE);
-    }
-    return fd;
-}
-
+define MAX_INPUT_SIZE 1024
 
 int main(void)
 {
@@ -32,8 +22,7 @@ int main(void)
                 if (strcmp(input, ".exit") == 0) {
                         break;
                 } if (strcmp(input, "db") == 0) {
-                        open_db("./build/mk.db");
-                        printf("mk.db created\n");
+                        init_db_file("mk");
                 } else {
                         printf("ERROR: '%s' is unrecognised command\n", input);
                 }
