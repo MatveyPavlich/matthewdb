@@ -8,7 +8,7 @@
 
 #include "dbfile.h"
 
-define MAX_INPUT_SIZE 1024
+#define MAX_INPUT_SIZE 1024
 
 int main(void)
 {
@@ -22,7 +22,7 @@ int main(void)
                 if (strcmp(input, ".exit") == 0) {
                         break;
                 } if (strcmp(input, "db") == 0) {
-                        init_db_file("mk");
+                        init_db_file();
                 } else {
                         printf("ERROR: '%s' is unrecognised command\n", input);
                 }
