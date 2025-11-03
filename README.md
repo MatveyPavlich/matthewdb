@@ -1,12 +1,12 @@
 # matthewdb
 
-Toy database for learning purposes built using C99.
+Toy relational database built in **C99** for learning purposes.
 
-# Features to implement
-## Done:
+## Current Scope
+- Implementing a **heap-table storage engine**: single `.db` file, fixed-size pages, slotted records.
 
-## Todo:
-[] Storage Engine – files, pages, and tables (SQLite-like core)
-[] Execution Engine – simple SQL parsing and query evaluation
-[] Server Layer – sockets, request/response protocol
-[] Client Shell – CLI that sends commands to the server
+## Roadmap
+- [ ] Storage Engine – files, pages, and heap tables (SQLite-like core)  
+- [ ] Execution Engine – minimal SQL parsing and query evaluation  
+- [ ] Server Layer – socket protocol for client requests  
+- [ ] Client Shell – interactive CLI
