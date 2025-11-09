@@ -21,9 +21,21 @@ int main(void)
 
                 if (strcmp(input, ".exit") == 0) {
                         break;
-                } if (strcmp(input, "db") == 0) {
+                }
+                else if (strcmp(input, "db") == 0) {
                         init_db_file();
-                } else {
+                }
+                else if (strcmp(input, "c") == 0) {
+                         // TODO: create table
+                         printf("Table created\n");
+                }
+                else if (strcmp(input, "u") == 0) {
+                        printf("Row updated\n");       
+                }
+                else if (strcmp(input, "d") == 0) {
+                        printf("Row deleted\n");       
+                }
+                else {
                         printf("ERROR: '%s' is unrecognised command\n", input);
                 }
 
